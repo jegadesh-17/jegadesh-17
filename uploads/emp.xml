@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Employees>
+    <Employee>
+        <EMPLOYEE_ID>1</EMPLOYEE_ID>
+        <NAME>John Doe</NAME>
+        <SALARY>50000.00</SALARY>
+    </Employee>
+    <Employee>
+        <EMPLOYEE_ID>2</EMPLOYEE_ID>
+        <NAME>Jane Smith</NAME>
+        <SALARY>60000.00</SALARY>
+    </Employee>
+    <Employee>
+        <EMPLOYEE_ID>3</EMPLOYEE_ID>
+        <NAME>Emily Johnson</NAME>
+        <SALARY>55000.00</SALARY>
+    </Employee>
+</Employees>

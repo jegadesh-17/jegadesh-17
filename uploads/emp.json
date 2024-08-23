@@ -1,0 +1,17 @@
+[
+    {
+        "employee_id": 1,
+        "name": "John Doe",
+        "salary": 50000.00
+    },
+    {
+        "employee_id": 2,
+        "name": "Jane Smith",
+        "salary": 60000.00
+    },
+    {
+        "employee_id": 3,
+        "name": "Alice Johnson",
+        "salary": 55000.00
+    }
+]
