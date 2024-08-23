@@ -4268,3 +4268,112 @@ Object 'MOHAN' already exists.
 2024-08-22 11:56:08,766 - INFO - closed
 2024-08-22 11:56:08,803 - INFO - No async queries seem to be running, deleting session
 2024-08-22 11:56:08,854 - INFO - 127.0.0.1 - - [22/Aug/2024 11:56:08] "POST /map_columns HTTP/1.1" 200 -
+2024-08-23 15:45:51,771 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-08-23 15:45:51,779 - INFO - [33mPress CTRL+C to quit[0m
+2024-08-23 15:45:51,886 - INFO -  * Restarting with watchdog (windowsapi)
+2024-08-23 15:45:54,361 - WARNING -  * Debugger is active!
+2024-08-23 15:45:54,372 - INFO -  * Debugger PIN: 452-454-072
+2024-08-23 15:46:01,426 - INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.5, Platform: Windows-10-10.0.19045-SP0
+2024-08-23 15:46:01,427 - INFO - Connecting to GLOBAL Snowflake domain
+2024-08-23 15:46:01,427 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-08-23 15:46:15,717 - INFO - Number of results in first chunk: 15
+2024-08-23 15:46:15,721 - INFO - closed
+2024-08-23 15:46:15,815 - INFO - No async queries seem to be running, deleting session
+2024-08-23 15:46:16,247 - INFO - 127.0.0.1 - - [23/Aug/2024 15:46:16] "GET / HTTP/1.1" 200 -
+2024-08-23 15:46:16,525 - INFO - 127.0.0.1 - - [23/Aug/2024 15:46:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-08-23 15:47:02,152 - ERROR - Error loading file: lxml not found, please install or use the etree parser.
+2024-08-23 15:47:02,154 - INFO - 127.0.0.1 - - [23/Aug/2024 15:47:02] "[32mPOST /process HTTP/1.1[0m" 302 -
+2024-08-23 15:47:02,172 - INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.5, Platform: Windows-10-10.0.19045-SP0
+2024-08-23 15:47:02,173 - INFO - Connecting to GLOBAL Snowflake domain
+2024-08-23 15:47:02,174 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-08-23 15:47:03,750 - INFO - Number of results in first chunk: 15
+2024-08-23 15:47:03,751 - INFO - closed
+2024-08-23 15:47:03,803 - INFO - No async queries seem to be running, deleting session
+2024-08-23 15:47:03,860 - INFO - 127.0.0.1 - - [23/Aug/2024 15:47:03] "GET / HTTP/1.1" 200 -
+2024-08-23 15:47:30,226 - ERROR - Error loading file: lxml not found, please install or use the etree parser.
+2024-08-23 15:47:30,227 - INFO - 127.0.0.1 - - [23/Aug/2024 15:47:30] "[32mPOST /process HTTP/1.1[0m" 302 -
+2024-08-23 15:47:30,237 - INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.5, Platform: Windows-10-10.0.19045-SP0
+2024-08-23 15:47:30,237 - INFO - Connecting to GLOBAL Snowflake domain
+2024-08-23 15:47:30,238 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-08-23 15:47:32,007 - INFO - Number of results in first chunk: 15
+2024-08-23 15:47:32,008 - INFO - closed
+2024-08-23 15:47:32,048 - INFO - No async queries seem to be running, deleting session
+2024-08-23 15:47:32,100 - INFO - 127.0.0.1 - - [23/Aug/2024 15:47:32] "GET / HTTP/1.1" 200 -
+2024-08-23 15:48:04,579 - INFO -  * Detected change in 'c:\\onetoone\\app.py', reloading
+2024-08-23 15:48:04,586 - INFO -  * Detected change in 'c:\\onetoone\\app.py', reloading
+2024-08-23 15:48:04,589 - INFO -  * Detected change in 'c:\\onetoone\\app.py', reloading
+2024-08-23 15:48:04,945 - INFO -  * Detected change in 'c:\\onetoone\\app.py', reloading
+2024-08-23 15:48:04,952 - INFO -  * Detected change in 'c:\\onetoone\\app.py', reloading
+2024-08-23 15:48:04,956 - INFO -  * Detected change in 'c:\\onetoone\\app.py', reloading
+2024-08-23 15:48:05,577 - INFO -  * Restarting with watchdog (windowsapi)
+2024-08-23 15:48:08,451 - WARNING -  * Debugger is active!
+2024-08-23 15:48:08,462 - INFO -  * Debugger PIN: 452-454-072
+2024-08-23 15:48:13,786 - INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.5, Platform: Windows-10-10.0.19045-SP0
+2024-08-23 15:48:13,787 - INFO - Connecting to GLOBAL Snowflake domain
+2024-08-23 15:48:13,788 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-08-23 15:48:17,349 - INFO - Number of results in first chunk: 15
+2024-08-23 15:48:17,349 - INFO - closed
+2024-08-23 15:48:17,392 - INFO - No async queries seem to be running, deleting session
+2024-08-23 15:48:17,445 - INFO - 127.0.0.1 - - [23/Aug/2024 15:48:17] "GET / HTTP/1.1" 200 -
+2024-08-23 15:48:47,473 - INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.5, Platform: Windows-10-10.0.19045-SP0
+2024-08-23 15:48:47,474 - INFO - Connecting to GLOBAL Snowflake domain
+2024-08-23 15:48:47,474 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-08-23 15:48:49,004 - INFO - Number of results in first chunk: 14
+2024-08-23 15:48:49,006 - INFO - closed
+2024-08-23 15:48:49,064 - INFO - No async queries seem to be running, deleting session
+2024-08-23 15:48:49,330 - INFO - 127.0.0.1 - - [23/Aug/2024 15:48:49] "POST /process HTTP/1.1" 200 -
+2024-08-23 15:48:59,240 - INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.5, Platform: Windows-10-10.0.19045-SP0
+2024-08-23 15:48:59,242 - INFO - Connecting to GLOBAL Snowflake domain
+2024-08-23 15:48:59,242 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-08-23 15:49:00,516 - INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.5, Platform: Windows-10-10.0.19045-SP0
+2024-08-23 15:49:00,517 - INFO - Connecting to GLOBAL Snowflake domain
+2024-08-23 15:49:00,517 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-08-23 15:49:01,894 - INFO - Number of results in first chunk: 14
+2024-08-23 15:49:01,895 - INFO - closed
+2024-08-23 15:49:01,940 - INFO - No async queries seem to be running, deleting session
+2024-08-23 15:49:01,994 - INFO - Insert query: INSERT INTO JAGA ("EEID", "FullName", "JobTitle", "Department", "BusinessUnit", "Gender", "Ethnicity", "Age", "HireDate", "AnnualSalary", "Bonuspercent", "Country", "City", "ExitDate") VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+2024-08-23 15:49:02,002 - INFO - Inserting row: [None, 'praveen', None, None, None, None, None, None, None, None, None, None, None, None]
+2024-08-23 15:49:02,836 - INFO - Inserting row: [None, ' jhvjhvhjv', None, None, None, None, None, None, None, None, None, None, None, None]
+2024-08-23 15:49:03,433 - INFO - Inserting row: [None, 'Luna Sanders', None, None, None, None, None, None, None, None, None, None, None, None]
+2024-08-23 15:49:03,861 - INFO - Inserting row: [None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+2024-08-23 15:49:04,172 - INFO - Inserting row: [None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+2024-08-23 15:49:04,678 - INFO - Inserting row: [None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+2024-08-23 15:49:05,064 - INFO - Inserting row: [None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+2024-08-23 15:49:05,399 - INFO - Inserting row: [None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+2024-08-23 15:49:05,908 - INFO - Inserting row: [None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+2024-08-23 15:49:06,213 - INFO - Inserting row: [None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+2024-08-23 15:49:06,523 - INFO - Data successfully written to Snowflake table: JAGA
+2024-08-23 15:49:06,525 - INFO - closed
+2024-08-23 15:49:06,592 - INFO - No async queries seem to be running, deleting session
+2024-08-23 15:49:06,871 - INFO - 127.0.0.1 - - [23/Aug/2024 15:49:06] "POST /map_columns HTTP/1.1" 200 -
+2024-08-23 15:49:10,497 - INFO - 127.0.0.1 - - [23/Aug/2024 15:49:10] "[32mPOST /view_all_data HTTP/1.1[0m" 302 -
+2024-08-23 15:49:10,511 - INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.5, Platform: Windows-10-10.0.19045-SP0
+2024-08-23 15:49:10,511 - INFO - Connecting to GLOBAL Snowflake domain
+2024-08-23 15:49:10,511 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-08-23 15:49:11,926 - INFO - Number of results in first chunk: 15
+2024-08-23 15:49:11,927 - INFO - closed
+2024-08-23 15:49:11,984 - INFO - No async queries seem to be running, deleting session
+2024-08-23 15:49:12,081 - INFO - 127.0.0.1 - - [23/Aug/2024 15:49:12] "GET /view_all_data HTTP/1.1" 200 -
+2024-08-23 15:49:22,544 - INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.5, Platform: Windows-10-10.0.19045-SP0
+2024-08-23 15:49:22,545 - INFO - Connecting to GLOBAL Snowflake domain
+2024-08-23 15:49:22,546 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-08-23 15:49:23,988 - INFO - Number of results in first chunk: 0
+2024-08-23 15:49:23,988 - INFO - closed
+2024-08-23 15:49:24,028 - INFO - No async queries seem to be running, deleting session
+2024-08-23 15:49:24,118 - INFO - 127.0.0.1 - - [23/Aug/2024 15:49:24] "POST /view_table_data HTTP/1.1" 200 -
+2024-08-23 15:49:28,646 - INFO - 127.0.0.1 - - [23/Aug/2024 15:49:28] "[32mPOST /view_all_data HTTP/1.1[0m" 302 -
+2024-08-23 15:49:28,657 - INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.5, Platform: Windows-10-10.0.19045-SP0
+2024-08-23 15:49:28,657 - INFO - Connecting to GLOBAL Snowflake domain
+2024-08-23 15:49:28,657 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-08-23 15:49:30,046 - INFO - Number of results in first chunk: 15
+2024-08-23 15:49:30,047 - INFO - closed
+2024-08-23 15:49:30,083 - INFO - No async queries seem to be running, deleting session
+2024-08-23 15:49:30,137 - INFO - 127.0.0.1 - - [23/Aug/2024 15:49:30] "GET /view_all_data HTTP/1.1" 200 -
+2024-08-23 15:49:32,167 - INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.5, Platform: Windows-10-10.0.19045-SP0
+2024-08-23 15:49:32,167 - INFO - Connecting to GLOBAL Snowflake domain
+2024-08-23 15:49:32,167 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2024-08-23 15:49:33,959 - INFO - Number of results in first chunk: 15
+2024-08-23 15:49:33,960 - INFO - closed
+2024-08-23 15:49:34,000 - INFO - No async queries seem to be running, deleting session
+2024-08-23 15:49:34,050 - INFO - 127.0.0.1 - - [23/Aug/2024 15:49:34] "GET / HTTP/1.1" 200 -
