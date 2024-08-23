@@ -3,12 +3,9 @@ import logging
 import pandas as pd
 from flask import Flask, render_template, request, redirect, url_for, flash
 from snowflake.connector import connect
-from snowflake.connector.pandas_tools import write_pandas
 import json
-import xml.etree.ElementTree as ET
-import csv
 
-app = Flask(__name__)
+app = Flask(_name_)
 app.secret_key = 'your_secret_key'
 
 # Define and create the upload directory
@@ -58,16 +55,38 @@ def list_tables_in_database():
     finally:
         conn.close()
 
-def write_to_snowflake(df, table_name, save_mode='append'):
-    """Write DataFrame to Snowflake table."""
+def write_to_snowflake(df, table_name, column_mapping):
+    """Write DataFrame to Snowflake table based on the column mapping."""
     conn = connect_snowflake()
-    
     try:
-        logging.info(df)
+        with conn.cursor() as cur:
+            table_columns = fetch_table_columns(table_name)
 
-        # Write DataFrame to Snowflake
-        write_pandas(conn, df, table_name, auto_create_table=True, mode=save_mode)
-        logging.info(f"Data successfully written to Snowflake table: {table_name} with mode: {save_mode}")
+            # Prepare the insert query
+            columns_in_table = ', '.join([f'"{col}"' for col in table_columns])
+            placeholders = ', '.join(['%s' for _ in table_columns])
+            insert_query = f"INSERT INTO {table_name.upper()} ({columns_in_table}) VALUES ({placeholders})"
+            logging.info(f"Insert query: {insert_query}")
+
+            for _, row in df.iterrows():
+                row_data = []
+                for col in table_columns:
+                    if col in column_mapping.values():
+                        input_col = [k for k, v in column_mapping.items() if v == col][0]
+                        value = row.get(input_col, None)
+                        
+                        # Handle numeric fields by converting empty strings to None
+                        if isinstance(value, str) and value == '':
+                            value = None
+                        
+                        row_data.append(value)
+                    else:
+                        row_data.append(None)
+                
+                logging.info(f"Inserting row: {row_data}")
+                cur.execute(insert_query, tuple(row_data))
+
+            logging.info(f"Data successfully written to Snowflake table: {table_name.upper()}")
     except Exception as e:
         logging.error(f"Error occurred: {e}")
         raise
@@ -89,55 +108,24 @@ def process_file():
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
     file.save(file_path)
 
+    # Load the file into a DataFrame
     try:
         if file_type == 'csv':
             df = pd.read_csv(file_path)
         elif file_type == 'json':
             df = pd.read_json(file_path)
         elif file_type == 'xml':
-            # Convert XML to CSV
-            csv_file_path = os.path.join(app.config['UPLOAD_FOLDER'], 'output.csv')
-            tree = ET.parse(file_path)
-            root = tree.getroot()
-
-            # Extract headers
-            headers = set()
-            for elem in root.iter():
-                for child in elem:
-                    if child.text and child.text.strip():
-                        headers.add(child.tag)
-            headers = sorted(headers)
-
-            # Write to CSV
-            with open(csv_file_path, 'w', newline='') as csvfile:
-                csvwriter = csv.DictWriter(csvfile, fieldnames=headers)
-                csvwriter.writeheader()
-                for elem in root.findall('./*'):
-                    row_data = {}
-                    for header in headers:
-                        child = elem.find(header)
-                        if child is not None and child.text and child.text.strip():
-                            row_data[header] = child.text.strip()
-                        else:
-                            row_data[header] = ''
-                    if any(row_data.values()):
-                        csvwriter.writerow(row_data)
-            logging.info("XML data successfully converted to CSV.")
-
-            # Load the CSV into a DataFrame
-            df = pd.read_csv(csv_file_path)
-        elif file_type == 'txt':
-            # Existing text file processing logic...
-            pass
+            df = pd.read_xml(file_path)
         else:
             flash('Unsupported file type.')
             return redirect(url_for('index'))
 
-        logging.info(f"DataFrame from file:\n{df.head()}")
+        # Replace NaN values with empty strings
         df.fillna("", inplace=True)
 
         if create_or_select == 'new':
             table_name = request.form['new_table_name']
+
             conn = connect_snowflake()
             try:
                 with conn.cursor() as cur:
@@ -148,7 +136,7 @@ def process_file():
                     cur.execute(create_table_query)
                     logging.info(f"Table {table_name.upper()} created successfully.")
                 flash('Table created successfully!')
-                return redirect(url_for('index'))
+                return redirect(url_for('index'))  # Stay on the same page after creating the table
             except Exception as e:
                 logging.error(f"Error creating table: {e}")
                 flash('Error creating new table.')
@@ -157,6 +145,8 @@ def process_file():
                 conn.close()
         else:
             table_name = request.form['table_name']
+
+            # Fetch columns from the selected table
             table_columns = fetch_table_columns(table_name)
 
             return render_template('map_columns.html', 
@@ -169,6 +159,9 @@ def process_file():
         logging.error(f"Error loading file: {e}")
         flash('Error loading file.')
         return redirect(url_for('index'))
+
+
+
 
 @app.route('/map_columns', methods=['POST'])
 def map_columns():
@@ -195,11 +188,8 @@ def map_columns():
     column_mapping = dict(zip(selected_input_columns, selected_table_columns))
 
     try:
-        logging.info('running')
-        logging.info(df)
         # Write the mapped data to Snowflake
-        write_to_snowflake(df, table_name, save_mode='append')
-        logging.info('completed')
+        write_to_snowflake(df, table_name, column_mapping)
     except Exception as e:
         flash(f'Error occurred while writing data: {e}', 'error')
         return render_template('map_columns.html', 
